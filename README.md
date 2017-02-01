@@ -7,3 +7,5 @@ Future Features:
 
 1. Default Profile Image if none specified
 2. Additional Mobile Styling
+3. Clean up lots of code
+
