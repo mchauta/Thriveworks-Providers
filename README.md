@@ -5,5 +5,5 @@ This plugin was design to use Advanced Custom Fields and a shortcode to display 
 
 Future Features:
 
-1. Default Profile Image if none specified.
+1. Default Profile Image if none specified
 2. Additional Mobile Styling
