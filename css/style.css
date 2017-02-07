@@ -100,3 +100,30 @@
         float: none;
     }
 }
+
+.corp-profile {
+    display: inline;
+}
+
+
+.corp-profile-left {
+   float: left;
+    margin-right: 20px;
+}
+
+.corp-profile-right {
+}
+.corp-profile-left span {
+position: absolute;
+    font-size: 30px;
+    color: #fff;
+padding: 10px 6px 12px 10px;
+    background-color: gold;
+    border-radius: 10px;
+    margin:10px
+}
+/*.corp-profile-left span::after {
+content:"click to play intro";
+    font-size: 14px;
+
+}*/

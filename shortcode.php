@@ -169,13 +169,22 @@ function shortcode_providers($atts) {
             $thumbnail = get_the_post_thumbnail( get_the_ID(), 'medium',
                                array ('itemprop' => 'image',
                                       'alt' => $first_name . ' ' . $last_name,
-                                      'class' => 'alignleft'
+                                      'class' => ''
                                      ));
             $post_content = get_the_content();
             $post_content = do_shortcode( $post_content);
             $post_content = wpautop( $post_content );
             $content = $content .=
-                '<h2>' . $title . '</h2>' . $thumbnail . $post_content . '<hr />';
+                '<div class="corp-profile">
+                    <div class="corp-profile-left">
+                        <a href="#">
+                            <span class="play">&#9658;</span>'
+                . $thumbnail .
+                    '</a></div>
+                    <div class="corp-profile-right"><h2>' . $title . '</h2>' . $post_content .
+                    '</div>
+                    <hr />
+                    </div>';
             wp_reset_postdata();
 
         }
