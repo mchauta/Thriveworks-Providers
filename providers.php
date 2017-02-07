@@ -39,6 +39,14 @@ function sample_admin_notice__success() {
 
 add_action( 'admin_notices', 'sample_admin_notice__success' );
 
+//enqueue style.css
+function reg_providers_styles() {
+    $css_path = get_stylesheet_directory() . '/style.css';
+// Example: /home/user/var/www/wordpress/wp-content/plugins/my-plugin/
+    wp_enqueue_style('providers-style', '/wp-content/plugins/providers/css/style.css', array(), filemtime($css_path));
+}
+add_action('wp_enqueue_scripts', 'reg_providers_styles');
+
 // Creates Custom Post Type 'Providers'
 function providers_init() {
     $args = array(

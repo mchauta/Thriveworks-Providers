@@ -1,8 +1,5 @@
 <?php
 
-//enqueue style.css
-wp_enqueue_style('providers-style', '/wp-content/plugins/providers/css/style.css');
-
 //Register shortcodes
 function register_shortcodes() {
     add_shortcode('providers', 'shortcode_providers');
