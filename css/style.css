@@ -112,6 +112,7 @@
 }
 
 .corp-profile-right {
+    min-height: 300px;
 }
 .corp-profile-left span {
 position: absolute;
