@@ -171,16 +171,24 @@ function shortcode_providers($atts) {
                                       'alt' => $first_name . ' ' . $last_name,
                                       'class' => ''
                                      ));
+            $intro_video = get_field('intro_video');
             $post_content = get_the_content();
             $post_content = do_shortcode( $post_content);
             $post_content = wpautop( $post_content );
             $content = $content .=
                 '<div class="corp-profile">
-                    <div class="corp-profile-left">
-                        <a href="#">
+                    <div class="corp-profile-left">';
+                if ($intro_video) {
+                    $content= $content .= '
+                        <a data-lity data-lity-desc="' . $first_name . ' ' .$last_name . ' Introduction Video" href="' . $intro_video . '">' . '
                             <span class="play">&#9658;</span>'
                 . $thumbnail .
-                    '</a></div>
+                    '</a>';
+                } else {
+                    $content = $content .= $thumbnail;
+                }
+            $content = $content .= '
+            </div>
                     <div class="corp-profile-right"><h2>' . $title . '</h2>' . $post_content .
                     '</div>
                     <hr />
