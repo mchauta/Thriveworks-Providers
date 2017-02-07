@@ -166,6 +166,7 @@ function shortcode_providers($atts) {
             $first_name = get_field('first_name');
             $last_name = get_field('last_name');
             $title = get_the_title();
+            $pro_title = get_field('professional_title');
             $thumbnail = get_the_post_thumbnail( get_the_ID(), 'medium',
                                array ('itemprop' => 'image',
                                       'alt' => $first_name . ' ' . $last_name,
@@ -189,7 +190,7 @@ function shortcode_providers($atts) {
                 }
             $content = $content .= '
             </div>
-                    <div class="corp-profile-right"><h2>' . $title . '</h2>' . $post_content .
+                    <div class="corp-profile-right"><h2>' . $title . ', ' . $pro_title . '</h2>' . $post_content .
                     '</div>
                     <hr />
                     </div>';
