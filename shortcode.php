@@ -121,7 +121,7 @@ function shortcode_providers($atts) {
             $address = get_field('street_address') . '<br>' . get_field('city') . ', ' .                        get_field('state') . ' ' . get_field('postal_code');
             //content
             $content = $content .=
-                 '<div class="associate-profile" id="' . $first_name . '_' . $last_name . '><div class="associate-left alignleft">' .
+                 '<div class="associate-profile" id="' . $first_name . '_' . $last_name . '"><div class="associate-left alignleft">' .
                     $thumbnail .
                 '<button>
                     <a href="https://thriveworks.gettimely.com/book?staff=' . $booking_id .
