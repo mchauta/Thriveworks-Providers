@@ -101,6 +101,7 @@ function shortcode_providers($atts) {
             $review_tag = get_field('review_tag');
             $second_location = get_field('second_location');
             $first_name = get_field('first_name');
+            $first_name =str_replace(' ', '', $first_name);
             $last_name = get_field('last_name');
             $thumbnail = get_the_post_thumbnail( get_the_ID(), 'medium',
                                array ('itemprop' => 'image',
@@ -161,6 +162,7 @@ function shortcode_providers($atts) {
 
         } else if (has_term( 'Corporate/Franchise', 'providers_type' )) {
             $first_name = get_field('first_name');
+            $first_name =str_replace(' ', '', $first_name);
             $last_name = get_field('last_name');
             $title = get_the_title();
             $pro_title = get_field('professional_title');
