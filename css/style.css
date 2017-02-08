@@ -123,8 +123,9 @@ padding: 10px 6px 12px 10px;
     border-radius: 10px;
     margin:10px
 }
-/*.corp-profile-left span::after {
-content:"click to play intro";
-    font-size: 14px;
-
-}*/
+@media only screen and (max-width: 475px) {
+    .corp-profile-left {
+        float: none;
+        text-align: center;
+    }
+}
