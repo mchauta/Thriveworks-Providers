@@ -174,7 +174,7 @@ function shortcode_providers($atts) {
             $post_content = do_shortcode( $post_content);
             $post_content = wpautop( $post_content );
             $content = $content .=
-                '<div class="corp-profile" id="' . $first_name . '_' . $last_name . '>
+                '<div class="corp-profile" id="' . $first_name . '_' . $last_name . '">
                     <div class="corp-profile-left">';
                 if ($intro_video) {
                     $content= $content .= '
